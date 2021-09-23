@@ -2,7 +2,9 @@
 title: "car_viz_HTML version"
 author: "Boyu Chen"
 date: "9/22/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -45,6 +47,7 @@ ggplot(mtcars_mpg2) +
   geom_smooth(span = 0.5) +
   theme_minimal()
 
+#We draw a smooth line, and I found as the "span" increase, there will be more proportion of points in the plot which can affect the smooth at each value
 
 # note that this boxplot cannot be made with esquisse() unless
 # the data is adjusted.  What adjustment is needed?
@@ -56,7 +59,8 @@ ggplot(mtcars_mpg2, aes(x=as.factor(cyl), y=mpg)) +
 
 
 
-
+# And then as the number of cyl increse, the mpg will decrease, which means the car
+#will consume more gas.
 
 
 
